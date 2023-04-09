@@ -1,0 +1,28 @@
+/* Theme colors */
+$primary: #FFF !default;
+$secondary: #7ED4B9 !default;
+$details: #BC9E5F !default;
+
+/* Colors patener */
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "details": $details,
+    "black": #000,
+);
+
+// font size
+$global__font-size: 1rem !default;
+$global__font-size-sm: .75rem !default;
+$global__font-size-md: $global__font-size * .75 !default;
+$global__font-size-lg: $global__font-size * 1.5 !default;
+$global__font-size-xl: $global__font-size * 2 !default;
+$global__font-size-xxl: $global__font-size * 3 !default;
+
+// border radius
+$global__border-radius: 30px !default;
+$global__border-thickness: 2px !default;
+
+// spacing
+$global__margin: .75rem !default;
+$global__padding: .75rem !default;
