@@ -9,5 +9,5 @@
 <body class="<?php body_class(); ?>">
     <!-- add function wp_body_open() -->
     <?php wp_body_open(); ?>
-    <div>
-        <main>
+    <div id="page" class="site">
+        <main id="primary" class="site-main">
