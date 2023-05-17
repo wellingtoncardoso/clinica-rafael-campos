@@ -1,0 +1,128 @@
+/* body */
+body{
+    font-family: $global__baumans-regular;
+}
+
+/* header */
+%flex-header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    @extend %flex-header;
+    position: fixed;
+    background: linear-gradient( 180deg, rgba( 188,158,95,.5 )  0%, rgba( 188,158,95, .6 ) 100% );
+    box-shadow: $global__box-shadow;
+    z-index: 1;
+    .container{
+        @extend %flex-header;
+    }
+}
+
+/* site-main */
+#site-main{
+    position: relative;
+    .site-main__redes-sociais{
+        .redes-sociais{
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+        } 
+    }
+}
+
+/* hero */
+#hero{
+    &.site-main__banner{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        max-height: calc( 100vh - 144px );
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $global__rgba-details;
+            opacity: .5;            
+        }
+    }
+    .details{
+        position: absolute;
+        left: 5%;
+        top: calc( 100% - 50vh );
+        width: 50vw;
+        max-height: 50vh;
+        min-height: 30vh;
+        display: grid;
+        align-items: center;
+        
+    }
+}
+
+/* services */
+#services{
+    #accordion{
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+        .accordion-item{
+            background-color: $primary;
+            color: $details;
+            margin: 1rem 0;
+            border-radius: 0;
+            box-shadow: $global__box-shadow;
+            .accordion-item__header{
+                position: relative;
+                padding: $global__padding $global__padding + 1.75;
+                min-height: 3.5rem;
+                line-height: 22px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                &::after{
+                    content: "\002B";
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 1rem;
+                }
+                &.active{
+                    &::after{
+                        content: "\2212";
+                    }
+                }
+            }
+            .accordion-item__body{
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .2s ease-out;
+                .content{
+                    padding: $global__padding;
+                    line-height: 22px;
+                    border-top: 1px solid;
+                    border-image: linear-gradient( to right, transparent, $details, transparent );
+                }
+            }
+        }
+    }
+}
+
+/* divider's */
+.divider-vertical{
+    border-left: 1px solid $primary;
+    height: 35px;
+    margin: 0 0 0 1rem;
+}
+
+// https://codepen.io/theenghrajan/pen/rNWOGML

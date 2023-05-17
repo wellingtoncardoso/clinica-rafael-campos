@@ -157,16 +157,18 @@ $global__utilities: (
             "xxl" : $global__font-size-xxl,
         ),
      ),
-     // font family
-    //  "font-family" : (
-    //     "prefix" : "family",
-    //     "values" : (
-    //         "primary" : $global__font-primary,
-    //         "secondary" : $global__font-secondary,
-    //         "text"      : $global__font-text,
-    //         "body"      :$global__font-body,
-    //     ),
-    //  ),
+    //  font family
+     "font-family" : (
+        "prefix" : "family",
+        "values" : (
+            "primary" : $global__baumans-regular,
+            "secondary" : $global__exo2-regular,
+            "exo2-medium" : $global__exo2-medium,
+            "exo2-bold" : $global__exo2-bold,
+            "galaksie" : $global__galaksie,
+            "bauhaus" : $global__bauhaus,
+        ),
+     ),
      // boder radius
      "border-radius" : (
         "prefix" : "border",

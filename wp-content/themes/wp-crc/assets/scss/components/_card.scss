@@ -1,0 +1,24 @@
+.card{
+    display: block;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: $primary;
+    padding: $global__padding;
+    transition: 220ms all;
+    &:hover{
+        cursor: pointer;
+        box-shadow: $global__box-shadow;
+    }
+    .card-title{
+        font-weight: 700;
+        padding-bottom: $global__padding;
+    }
+    .card-details{
+        p{
+            font-size: $global__font-size;
+            font-size: $global__baumans-regular;
+            line-height: 18px;
+        }
+    }
+}

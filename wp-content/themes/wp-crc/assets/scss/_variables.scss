@@ -1,7 +1,71 @@
+/* theme fonts  */
+@font-face{
+    font-family: 'Baumans Regular' ;
+    src:    local( 'Baumans Regular' ), 
+            local( 'Baumans-Regular' ), 
+            url( '../fonts/Baumans-Regular.ttf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Exo2 Regular' ;
+    src:    local( 'Exo2 Regular' ), 
+            local( 'Exo2-Regular' ), 
+            url( '../fonts/Exo2-Regular.ttf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Exo2 Medium' ;
+    src:    local( 'Exo2 Medium' ), 
+            local( 'Exo2-Medium' ), 
+            url( '../fonts/Exo2-Medium.ttf' );
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Exo2 Bold' ;
+    src:    local( 'Exo2 Bold' ), 
+            local( 'Exo2-Bold' ), 
+            url( '../fonts/Exo2-Bold.ttf' );
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Galaksie' ;
+    src:    local( 'Galaksie' ), 
+            local( 'Galaksie' ), 
+            url( '../fonts/Galaksie.otf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Bauhaus' ;
+    src:    local( 'Bauhaus' ), 
+            local( 'Bauhaus' ), 
+            url( '../fonts/Bauhaus.ttf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+$global__baumans-regular: 'Baumans Regular' !default;
+$global__exo2-regular: 'Exo2 Regular' !default;
+$global__exo2-medium: 'Exo2 Medium' !default;
+$global__exo2-bold: 'Exo2 Bold' !default;
+$global__galaksie: 'Galaksie' !default;
+$global__bauhaus: 'Bauhaus' !default;
+
 /* Theme colors */
 $primary: #FFF !default;
 $secondary: #7ED4B9 !default;
 $details: #BC9E5F !default;
+$error: red !default;
 
 /* Colors patener */
 $colors: (
@@ -10,6 +74,10 @@ $colors: (
     "details": $details,
     "black": #000,
 );
+
+//rgba
+$global__rgba-secondary: rgba( 126,212,185,1 ) !default;
+$global__rgba-details: rgba( 188,158,95,1 ) !default;
 
 // font size
 $global__font-size: 1rem !default;
@@ -26,3 +94,10 @@ $global__border-thickness: 2px !default;
 // spacing
 $global__margin: .75rem !default;
 $global__padding: .75rem !default;
+
+// box shadow
+$global__box-shadow: 1px 3px 5px rgba( 0,0,0,.1 ) !default;
+$global__box-shadow-secondary: 1px 3px 5px $global__rgba-secondary !default;
+$global__box-shadow-details: 1px 3px 5px $global__rgba-details !default;
+
+
