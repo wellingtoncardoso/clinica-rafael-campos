@@ -2,11 +2,12 @@
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
-    padding: $global__padding;
+    padding: $global__padding - .075;
     border: $global__border-thickness solid $background-color;
-    border-radius: 0;
+    border-radius: $global__margin + .75;
     background-color: $background-color;
     transition: .3s all;
+    font-family: $global__exo2-regular;
 }
 
 .btn {
@@ -16,7 +17,6 @@
 @each $key, $val in $colors {
     .btn-#{$key}{
         @include btn ($val );
-        font-weight: 600;
         &:hover{
             background-color: lighten ( $val, 7 );
         }

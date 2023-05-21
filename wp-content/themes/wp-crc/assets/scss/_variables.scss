@@ -72,7 +72,7 @@ $colors: (
     "primary": $primary,
     "secondary": $secondary,
     "details": $details,
-    "black": #000,
+    "black": #585858,
 );
 
 //rgba
@@ -86,9 +86,11 @@ $global__font-size-md: $global__font-size * .75 !default;
 $global__font-size-lg: $global__font-size * 1.5 !default;
 $global__font-size-xl: $global__font-size * 2 !default;
 $global__font-size-xxl: $global__font-size * 3 !default;
+$global__font-size-xxxl: $global__font-size * 4 !default;
 
 // border radius
 $global__border-radius: 30px !default;
+$global__border-radius-full: 50% !default;
 $global__border-thickness: 2px !default;
 
 // spacing
@@ -97,7 +99,7 @@ $global__padding: .75rem !default;
 
 // box shadow
 $global__box-shadow: 1px 3px 5px rgba( 0,0,0,.1 ) !default;
-$global__box-shadow-secondary: 1px 3px 5px $global__rgba-secondary !default;
-$global__box-shadow-details: 1px 3px 5px $global__rgba-details !default;
+$global__box-shadow-secondary: 1px 3px 5px rgba( 126,212,185,3 ) !default;
+$global__box-shadow-details: 1px 3px 5px rgba( 188,158,95,.2 ) !default;
 
 

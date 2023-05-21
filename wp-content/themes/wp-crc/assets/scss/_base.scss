@@ -3,6 +3,25 @@ body{
     font-family: $global__baumans-regular;
 }
 
+p{
+    font-family: $global__exo2-regular;
+    font-size: $global__font-size;
+    margin-bottom: $global__margin;
+    line-height: 22px;
+}
+
+.img-720h{
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+}
+.img-520h{
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+
 /* header */
 %flex-header{
     width: 100%;
@@ -14,7 +33,8 @@ body{
 header{
     @extend %flex-header;
     position: fixed;
-    background: linear-gradient( 180deg, rgba( 188,158,95,.5 )  0%, rgba( 188,158,95, .6 ) 100% );
+    // background: linear-gradient( 180deg, rgba( 188,158,95,.5 )  0%, rgba( 188,158,95, .6 ) 100% );
+    background-color: $details;
     box-shadow: $global__box-shadow;
     z-index: 1;
     .container{
@@ -38,7 +58,7 @@ header{
 
 /* hero */
 #hero{
-    &.site-main__banner{
+    .site-main__banner{
         position: relative;
         width: 100vw;
         height: 100vh;
@@ -67,7 +87,11 @@ header{
         min-height: 30vh;
         display: grid;
         align-items: center;
-        
+        @media only screen and ( max-width: 575px ){
+            left: 0;
+            width: 100vw;
+            padding: 0 $global__padding + .75;
+        }
     }
 }
 
@@ -82,24 +106,25 @@ header{
             color: $details;
             margin: 1rem 0;
             border-radius: 0;
-            box-shadow: $global__box-shadow;
+            box-shadow: $global__box-shadow-details;
             .accordion-item__header{
                 position: relative;
-                padding: $global__padding $global__padding + 1.75;
+                padding: $global__padding;
                 min-height: 3.5rem;
                 line-height: 22px;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
                 &::after{
-                    content: "\002B";
-                    font-size: 2rem;
+                    content: "\203A";
+                    font-size: 1.5rem;
                     position: absolute;
                     right: 1rem;
                 }
                 &.active{
                     &::after{
-                        content: "\2212";
+                        content: "\203A";
+                        transform: rotate( 90deg );
                     }
                 }
             }
@@ -110,7 +135,7 @@ header{
                 .content{
                     padding: $global__padding;
                     line-height: 22px;
-                    border-top: 1px solid;
+                    border-top: 1px solid $details;
                     border-image: linear-gradient( to right, transparent, $details, transparent );
                 }
             }
@@ -118,11 +143,171 @@ header{
     }
 }
 
+/* slick dotz */
+.slick-dots{
+    bottom: 30px !important;
+    li{
+        width: 16px !important;
+        height: 16px !important;
+        border: 2px solid $secondary;
+        border-radius: $global__border-radius-full;
+        &.slick-active{
+            background-color: $secondary;
+        }
+    }
+}
 /* divider's */
 .divider-vertical{
     border-left: 1px solid $primary;
     height: 35px;
     margin: 0 0 0 1rem;
 }
+
+/* redes sociais */
+#redes{
+    background: linear-gradient( 180deg,  rgba( 126,212,185,.2 ) 0, rgba( 126,212,185,.2 ) 100% );
+    nav{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 0;
+            li{
+                a{
+                    i{
+                        color: $secondary;
+                        font-size: 36px;
+                        transition: .3s all;
+                        &:hover{
+                            cursor: pointer;
+                            color: #585858;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* icons */
+.phone-white{
+    width: 34px !important;
+    height: 34px !important;
+}
+
+/* schedule */
+#schedule{
+    background: linear-gradient( 180deg,  rgba( 188,158,95,.2 ) 0, rgba( 188,158,95,.2 ) 100% );
+    .action-phone{
+        i{
+            width: 30px;
+            height: 30px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: $details;
+            border-radius: 50% 
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+/* footer */
+footer{
+    figure{
+        img{
+            width: 100%;
+            max-width: 120px;
+            display: block;
+        }
+    }
+    p{
+        font-size: $global__font-size - .125;
+        line-height: 18px;
+    }
+    .nav-footer{
+        display: block;
+    }
+    .contacts{
+        margin-top: $global__margin;
+        width: 240px;
+        max-width: 100%;
+        border-top: 1px solid #585858;
+        ul{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            li{
+                a{
+                    i{
+                        width: 32px;
+                        height: 32px;
+                        background-color: $secondary;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: $global__border-radius;
+                        font-size: 20px;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*  
+*articles
+ */
+ article{
+    .article-header{
+        position: relative;
+        img{
+            &.size-medium{
+                width: 100%;
+                max-width: 300px;
+                height: 300px;
+                display: block;
+                object-fit: cover;
+            }
+            margin-bottom: $global__margin;
+        }
+        span{
+            position: absolute;
+            top: 0;
+            left: 6px;
+            background-color: $details;
+            color: $primary;
+            padding: $global__padding - .25;
+            border-radius: $global__border-radius;
+    
+            font-size: $global__font-size - .125;
+            margin: $global__margin 0;
+            .post-categories{
+                li{
+                    a{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .article-body{
+        
+    }
+    .btn-outlined-details{
+        &:hover{
+            color: $primary !important;
+        }
+    }
+ }
 
 // https://codepen.io/theenghrajan/pen/rNWOGML
